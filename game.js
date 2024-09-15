@@ -39,13 +39,13 @@ let financeTips = [
 let tipText;
 
 function preload() {
-    this.load.image('background', 'jpg imagem de fundo');  // <-- Troque aqui pela imagem de fundo (moedas)
-    this.load.image('ground', 'jpg imagem de fundo');       // <-- Troque pela imagem do chão
-    this.load.image('coin', 'coin-money-png');        // <-- Troque pela imagem da moeda
-    this.load.spritesheet('shurek', 'shurek.png', {
+    this.load.image('background', 'https://via.placeholder.com/800x600.png?text=Fundo');  // Imagem de fundo
+    this.load.image('ground', 'https://via.placeholder.com/800x100.png?text=Chão');       // Imagem do chão
+    this.load.image('coin', 'https://via.placeholder.com/32x32.png?text=Moeda');        // Imagem da moeda
+    this.load.spritesheet('shurek', 'https://via.placeholder.com/32x48.png?text=Shurek', {
         frameWidth: 32,
         frameHeight: 48
-    });  // <-- Troque pela imagem do Shurek
+    });  // Imagem do Shurek
 }
 
 function create() {
@@ -121,4 +121,3 @@ function collectCoin(player, coin) {
     const randomTip = Phaser.Math.Between(0, financeTips.length - 1);
     tipText.setText(financeTips[randomTip]);
 }
-
